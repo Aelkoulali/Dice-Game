@@ -43,7 +43,19 @@
                 <strong>Rolls:</strong> <span id="current-round-rolls">0</span>
                 <strong>Round:</strong> <span id="current-round">1</span>
             </p>
+            <div id="score-options">
+            <div>
+                <input type="radio" name="score-options" id="four-of-a-kind" value="four-of-a-kind" disabled> 
+                <label for="four-of-a-kind">Four of a kind<span></span></label>
+            </div>
+            </div>
+            <button class="btn" id="keep-score-btn" type="button">Keep the above selected score</button>
+            <button class="btn" id="roll-dice-btn" type="button">Roll the dice</button>
         </form>
+        <div id="scores">
+            <h3>Score history (Total score: <span id="total-score">0</span>)</h3>
+            <ol id="score-history"></ol>
+        </div>
     </main>
     <script src="script.js"></script>    
 </body>
