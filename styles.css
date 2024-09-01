@@ -17,14 +17,37 @@
 }
 
 body {
-    background-color: var(--navy);
+    background-color: var(--Electric-Blue);
     font-family: 'Roboto';
   
 }
+
+header {
+    color: var(--grey);
+    text-align: center;
+}
   
 h1 {
-    color: #f6f2f2;
+    color: var(--grey);
     text-align: center;
     margin: 25px 0;
+}
+
+.rules-container {
+    display: none;
+    background-color: var(--grey);
+    color: var(--black);
+    width: 50%;
+    margin: 20px auto;
+    height: 300px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
   
+.rules-container ul {
+    list-style-type: none;
+}
+  
+.points {
+    margin-top: 15px;
 }
