@@ -110,4 +110,16 @@ input[type="radio"]:disabled + label {
 .btn:hover:enabled {
     background-color: var(--);
 }
+
+@media (max-width: 992px) {
+    main {
+      width: 100%;
+    }
+}
+  
+@media (max-width: 500px) {
+    .btn {
+      width: 120px;
+    }
+}
   
