@@ -36,7 +36,7 @@ h1 {
 
 .rules-container {
     display: none;
-    background-color: var(--blue);
+    background-color: var(--grey);
     color: var(--black);
     width: 50%;
     margin: 20px auto;
