@@ -62,7 +62,7 @@ main {
     margin: auto;
     justify-items: center;
     width: 50%;
-    border: 2px solid var(--blue);
+    border: 2px solid var(--navy);
     border-radius: 10px;
 }
   
@@ -108,7 +108,7 @@ input[type="radio"]:disabled + label {
 }
   
 .btn:hover:enabled {
-    background-color: var(--);
+    background-color: var(--yellow);
 }
 
 @media (max-width: 992px) {
