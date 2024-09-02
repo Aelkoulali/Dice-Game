@@ -13,13 +13,12 @@
     --blue:#9DAAF2;
     --Electric-Blue:#59CBE8;
     --orange:#FF6A3D;
-    --yellow:#F4DB7D;
+    --green:#90ee90;
 }
 
 body {
     background-color: var(--Electric-Blue);
     font-family: 'Roboto';
-    
   
 }
 
@@ -29,7 +28,7 @@ header {
 }
   
 h1 {
-    color: var(--navy);
+    font-size: 2.5rem;
     text-align: center;
     margin: 25px 0;
 }
@@ -62,7 +61,7 @@ main {
     margin: auto;
     justify-items: center;
     width: 50%;
-    border: 2px solid var(--navy);
+    border: 2px solid var(--blue);
     border-radius: 10px;
 }
   
@@ -101,14 +100,14 @@ input[type="radio"]:disabled + label {
     margin: 10px 0 10px 0.5rem;
     color: var(--navy);
     background-color: var(--orange);
-    border-color: var(--navy);
+    border-color: var(--blue);
     border-width: 2px;
     border-radius: 8px;
-    font-weight: bold;
+   
 }
   
 .btn:hover:enabled {
-    background-color: var(--yellow);
+    background-color: var(--green);
 }
 
 @media (max-width: 992px) {
