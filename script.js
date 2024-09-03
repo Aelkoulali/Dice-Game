@@ -18,3 +18,15 @@ let diceValuesArr = [];
 let rolls = 0;
 let score = 0;
 let round = 1;
+
+// Add addEventListener to rulesBtn
+rulesBtn.addEventListener("click", () => {
+    isModalShowing = !isModalShowing; // convert to true
+    if (!isModalShowing) {
+        rulesBtn.textContent = "Show rules";
+        rulesContainer.style.display = "none";
+        } else {
+        rulesBtn.textContent = "Hide rules";
+        rulesContainer.style.display = "block";
+        }
+})
