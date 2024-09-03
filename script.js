@@ -30,3 +30,9 @@ rulesBtn.addEventListener("click", () => {
         rulesContainer.style.display = "block";
         }
 })
+
+// Add addEventListener to rulesBtn
+rollDiceBtn.addEventListener("click", () => {
+  
+
+})
