@@ -42,6 +42,7 @@ h1 {
     height: 300px;
     border-radius: 10px;
     overflow-y: scroll;
+    border: 3px solid var(--blue);
 }
   
 .rules-container ul {
