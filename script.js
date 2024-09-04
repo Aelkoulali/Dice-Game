@@ -19,6 +19,20 @@ let rolls = 0;
 let score = 0;
 let round = 1;
 
+// Add Function rollDice
+const rollDice = () => {
+    diceValuesArr = [];
+  
+    for (let i = 0; i < 5; i++) {
+      const randomDice = Math.floor(Math.random() * 6) + 1; // Generates 5 random numbers between 1 and 6 inclusive
+      diceValuesArr.push(randomDice); // Push those numbers to the array
+    };
+  
+    listOfAllDice.forEach((dice, index) => {
+      dice.textContent = diceValuesArr[index]; // display those numbers in listOfAllDice elements 
+    });
+  };
+
 // Add addEventListener to rulesBtn
 rulesBtn.addEventListener("click", () => {
     isModalShowing = !isModalShowing; // convert to true
@@ -31,24 +45,20 @@ rulesBtn.addEventListener("click", () => {
         }
 })
 
-// Add addEventListener to rollDiceBtn
-rollDiceBtn.addEventListener("click", () => {
-    let count = 0;
-    diceValuesArr = [];
-    while (diceValuesArr.length < 5){
-      let random = Math.ceil((Math.random() * 6)); // generates 5 random numbers between 1 and 6 inclusive
-      diceValuesArr.push(random); // Push those numbers to the array
-      listOfAllDice[count].textContent = random; // display those numbers in listOfAllDice elements
-      count++
-    }
-})
 
-// Display alert when the dice is rolled 3 times
+// Function that update round and rolls
+const updateStats = () => {
+    rollsElement.textContent = rolls;
+    roundElement.textContent = round;
+};
+
+// Add addEventListener to rollDiceBtn
 rollDiceBtn.addEventListener("click", () => {
   if(rolls === 3){
     alert("You have made three rolls this round, Please select a score");
   } else {
     rolls++
     rollDice();
+    updateStats();
   }  
 });
