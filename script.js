@@ -48,8 +48,8 @@ rulesBtn.addEventListener("click", () => {
 
 // Function that update round and rolls
 const updateStats = () => {
-    rollsElement.textContent = rolls;
-    roundElement.textContent = round;
+    rollsElement.textContent = rolls; // Update rolls text
+    roundElement.textContent = round; // Update round text
 };
 
 // Add addEventListener to rollDiceBtn
