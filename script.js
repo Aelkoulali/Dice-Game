@@ -31,8 +31,14 @@ rulesBtn.addEventListener("click", () => {
         }
 })
 
-// Add addEventListener to rulesBtn
+// Add addEventListener to rollDiceBtn
 rollDiceBtn.addEventListener("click", () => {
-  
-
+    let count = 0;
+    diceValuesArr = [];
+    while (diceValuesArr.length < 5){
+      let random = Math.ceil((Math.random() * 6)); // generates 5 random numbers between 1 and 6 inclusive
+      diceValuesArr.push(random); // Push those numbers to the array
+      listOfAllDice[count].textContent = random; // display those numbers in listOfAllDice elements
+      count++
+    }
 })
