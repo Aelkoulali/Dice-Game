@@ -31,20 +31,14 @@ const rollDice = () => {
     listOfAllDice.forEach((dice, index) => {
       dice.textContent = diceValuesArr[index]; // display those numbers in listOfAllDice elements 
     });
-  };
+};
 
-// Add addEventListener to rulesBtn
-rulesBtn.addEventListener("click", () => {
-    isModalShowing = !isModalShowing; // convert to true
-    if (!isModalShowing) {
-        rulesBtn.textContent = "Show rules";
-        rulesContainer.style.display = "none";
-        } else {
-        rulesBtn.textContent = "Hide rules";
-        rulesContainer.style.display = "block";
-        }
-})
-
+// Add updateRadioOption function
+const updateRadioOption = (index, score) => {
+  scoreInputs[index].disabled = false;
+  scoreInputs[index].value = score;
+  scoreSpans[index].textContent = `, score = ${score}`;
+}
 
 // Function that update round and rolls
 const updateStats = () => {
@@ -62,3 +56,15 @@ rollDiceBtn.addEventListener("click", () => {
     updateStats();
   }  
 });
+
+// Add addEventListener to rulesBtn
+rulesBtn.addEventListener("click", () => {
+    isModalShowing = !isModalShowing; // convert to true
+    if (!isModalShowing) {
+        rulesBtn.textContent = "Show rules";
+        rulesContainer.style.display = "none";
+        } else {
+        rulesBtn.textContent = "Hide rules";
+        rulesContainer.style.display = "block";
+        }
+})
