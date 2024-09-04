@@ -44,12 +44,11 @@ rollDiceBtn.addEventListener("click", () => {
 })
 
 // Display alert when the dice is rolled 3 times
-let count = 0;
 rollDiceBtn.addEventListener("click", () => {
-  if(count === 3){
-    alert("Select a score");
+  if(rolls === 3){
+    alert("You have made three rolls, Please select a score");
   } else {
-  rollDice();
-  count++
+    rolls++
+    rollDice();
   }  
 });
