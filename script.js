@@ -46,6 +46,11 @@ const updateStats = () => {
     roundElement.textContent = round; // Update round text
 };
 
+// Function that count how many times each number is found in the array
+const getHighestDuplicates = () => {
+  
+};
+
 // Add addEventListener to rollDiceBtn
 rollDiceBtn.addEventListener("click", () => {
   if(rolls === 3){
