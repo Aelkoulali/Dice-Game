@@ -47,8 +47,13 @@ const updateStats = () => {
 };
 
 // Function that count how many times each number is found in the array
-const getHighestDuplicates = () => {
-  
+const getHighestDuplicates = array => {
+  let duplicates = {}; 
+  array.forEach(number => {
+    duplicates[number] = (duplicates[number] || 0 ) + 1;
+  }) 
+  console.log(duplicates);
+
 };
 
 // Add addEventListener to rollDiceBtn
@@ -59,6 +64,7 @@ rollDiceBtn.addEventListener("click", () => {
     rolls++
     rollDice();
     updateStats();
+    getHighestDuplicates();
   }  
 });
 
