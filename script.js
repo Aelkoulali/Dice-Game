@@ -49,10 +49,28 @@ const updateStats = () => {
 // Function that count how many times each number is found in the array
 const getHighestDuplicates = array => {
   let duplicates = {}; 
-  array.forEach(number => {
-    duplicates[number] = (duplicates[number] || 0 ) + 1;
-  }) 
-  console.log(duplicates);
+  array.forEach(number => {duplicates[number] = (duplicates[number] || 0) + 1;
+  }); 
+  
+  let maxCount = 0;
+  let maxDuplicate;
+  let sum = array.reduce((sum, value) => sum + value, 0);
+
+  for (const[duplicate,count] of object.entries(duplicates)){
+    if ( count > maxCount) {
+      maxCount = count;
+      maxDuplicate = duplicate;
+    }
+  }
+
+  if(maxCount > 3){
+    updateRadioOption(1, sum)
+  }
+  if(maxCount > 2){
+    updateRadioOption(0, sum)
+  }
+  updateRadioOption(5, 0);
+
 
 };
 
