@@ -66,6 +66,10 @@ const getHighestDuplicates = (arr) => {
   }
 };
 
+// Create resetRadioOptions function, call this function before you roll the dice
+const resetRadioOptions = () => {
+
+};
 // Add addEventListener to rollDiceBtn
 rollDiceBtn.addEventListener("click", () => {
   if(rolls === 3){
@@ -75,7 +79,9 @@ rollDiceBtn.addEventListener("click", () => {
     rollDice();
     updateStats();
     getHighestDuplicates(diceValuesArr);
-  }  
+    resetRadioOptions();
+  };
+   
 });
 
 // Add addEventListener to rulesBtn
