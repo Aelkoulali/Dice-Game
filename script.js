@@ -46,9 +46,11 @@ const updateStats = () => {
     roundElement.textContent = round; // Update round text
 };
 
-// Create updateScore function
-const updateScore = (value, id) => {
-
+// Create updateScore function (user selected value, score achieved)
+const updateScore = (selectedValue, achieved) => {
+  score += parseInt(selectedValue); 
+  totalScoreElement.textContent = score;
+  scoreHistory.innerHTML = `<li>${achieved} : ${selectedValue}</li>`; // Add  new element li
 } 
 
 // Function that count how many times each number is found in the array  
