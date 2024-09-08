@@ -109,3 +109,9 @@ rulesBtn.addEventListener("click", () => {
         rulesContainer.style.display = "block";
         }
 })
+
+// Add addEventListener to keepScoreBtn
+keepScoreBtn.addEventListener("click", () => {
+  
+});
+
