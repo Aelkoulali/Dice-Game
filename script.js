@@ -46,13 +46,14 @@ const updateStats = () => {
     roundElement.textContent = round; // Update round text
 };
 
-// Function that count how many times each number is found in the array
+// Function that count how many times each number is found in the array  
 const getHighestDuplicates = (arr) => {
-  let sum = arr.reduce((acc, currVal) => acc + currVal, 0);
+  let sum = arr.reduce((acc, currVal) => acc + currVal, 0); //score = sum of all five dice values
   let duplicates = {};
   arr.forEach((num) => {
     duplicates[num] ? (duplicates[num] += 1) : (duplicates[num] = 1);
   });
+  // Update radio option index & score 
   for (const num in duplicates) {
     if (duplicates[num] >= 4) {
       updateRadioOption(1, sum);
