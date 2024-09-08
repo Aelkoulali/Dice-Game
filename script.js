@@ -112,6 +112,16 @@ rulesBtn.addEventListener("click", () => {
 
 // Add addEventListener to keepScoreBtn
 keepScoreBtn.addEventListener("click", () => {
+  let selectedValue;
+  let achieved;
+  for(const input of scoreInputs){
+    if(input.checked){
+      selectedValue = input.value;
+      achieved = input.id;
+      break;
+    }
+    
+  }
   
 });
 
