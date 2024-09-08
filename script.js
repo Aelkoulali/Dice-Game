@@ -68,6 +68,13 @@ const getHighestDuplicates = (arr) => {
 
 // Create resetRadioOptions function, call this function before you roll the dice
 const resetRadioOptions = () => {
+  scoreInputs.forEach((i)=> {
+    i.disabled = true;
+    i.checked = false;
+  })
+    scoreSpans.forEach((s) => {
+    s.textContent = '';
+  });
 
 };
 // Add addEventListener to rollDiceBtn
