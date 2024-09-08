@@ -53,6 +53,16 @@ const getHighestDuplicates = (arr) => {
   arr.forEach((num) => {
     duplicates[num] ? (duplicates[num] += 1) : (duplicates[num] = 1);
   });
+  for (const num in duplicates) {
+    if (duplicates[num] >= 4) {
+      updateRadioOption(1, sum);
+      updateRadioOption(0, sum);
+    } else if (duplicates[num] === 3) {
+      updateRadioOption(0, sum);
+    } else {
+      updateRadioOption(5, 0);
+    }
+  }
 };
 
 // Add addEventListener to rollDiceBtn
