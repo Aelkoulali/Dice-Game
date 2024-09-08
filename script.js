@@ -56,7 +56,7 @@ const getHighestDuplicates = array => {
   let maxDuplicate;
   let sum = array.reduce((sum, value) => sum + value, 0);
 
-  for (const[duplicate,count] of object.entries(duplicates)){
+  for (const [duplicate,count] of object.entries(duplicates)){
     if ( count > maxCount) {
       maxCount = count;
       maxDuplicate = duplicate;
@@ -82,7 +82,7 @@ rollDiceBtn.addEventListener("click", () => {
     rolls++
     rollDice();
     updateStats();
-    getHighestDuplicates();
+    getHighestDuplicates(diceValuesArr);
   }  
 });
 
