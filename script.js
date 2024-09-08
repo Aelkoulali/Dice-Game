@@ -46,6 +46,11 @@ const updateStats = () => {
     roundElement.textContent = round; // Update round text
 };
 
+// Create updateScore function
+const updateScore = (value, id) => {
+
+} 
+
 // Function that count how many times each number is found in the array  
 const getHighestDuplicates = (arr) => {
   let sum = arr.reduce((acc, currVal) => acc + currVal, 0); //score = sum of all five dice values
