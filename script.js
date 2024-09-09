@@ -144,6 +144,7 @@ keepScoreBtn.addEventListener("click", () => {
     } 
     if (round > 6) {
       setTimeout(alert("Final score"), 500);
+      resetGame();
     } else {
       alert("Please select an option or roll the dice");
     }
