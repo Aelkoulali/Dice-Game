@@ -84,7 +84,7 @@ const resetRadioOptions = () => {
   });
 
 };
-// Declare detectFullHouse functrion
+// Declare detectFullHouse function = If the user rolls three of one number, and two of another number
 const detectFullHouse = () => {
 
 };
