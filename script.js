@@ -120,7 +120,15 @@ keepScoreBtn.addEventListener("click", () => {
       achieved = input.id;
       break;
     }
-    
+    if (selectedValue) {
+      rolls = 0;
+      round++;
+      updateStats();
+      resetRadioOptions();
+      updateScore(selectedValue, achieved);
+    } else {
+      alert("Please select an option or roll the dice");
+    }
   }
   
 });
