@@ -84,6 +84,21 @@ const resetRadioOptions = () => {
   });
 
 };
+
+// Create a resetGame function
+const resetGame = () => {
+  listOfAllDice.forEach((die) => {
+    die.textContent = "0";
+  });
+  diceValuesArr = [0, 0, 0, 0, 0];
+  score = 0;
+  rolls = 0;
+  round = 1;
+  totalScore.textContent = "0";
+  scoreHistory.textContent = "";
+  currentRound.textContent = round;
+};
+
 // Add addEventListener to rollDiceBtn
 rollDiceBtn.addEventListener("click", () => {
   if(rolls === 3){
