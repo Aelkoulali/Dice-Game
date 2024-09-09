@@ -88,7 +88,7 @@ const resetRadioOptions = () => {
 // Create a resetGame function
 const resetGame = () => {
   listOfAllDice.forEach((die) => {
-    die.textContent = "0";
+    die.textContent = "0"; // Reset all of the listOfAllDice elements to display 0
   });
   diceValuesArr = [0, 0, 0, 0, 0];
   score = 0;
