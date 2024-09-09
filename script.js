@@ -84,6 +84,10 @@ const resetRadioOptions = () => {
   });
 
 };
+// Declare detectFullHouse functrion
+const detectFullHouse = () => {
+
+};
 
 // Create a resetGame function
 const resetGame = () => {
