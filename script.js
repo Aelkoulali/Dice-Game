@@ -87,16 +87,19 @@ const resetRadioOptions = () => {
 
 // Create a resetGame function
 const resetGame = () => {
-  listOfAllDice.forEach((die) => {
-    die.textContent = "0"; // Reset all of the listOfAllDice elements to display 0
-  });
   diceValuesArr = [0, 0, 0, 0, 0];
   score = 0;
   rolls = 0;
   round = 1;
-  totalScore.textContent = "0";
-  scoreHistory.textContent = "";
-  currentRound.textContent = round;
+
+  listOfAllDice.forEach((die) => { die.textContent = "0";}); // Reset all of the listOfAllDice elements to display 0
+  totalScoreElement.textContent = score;
+  scoreHistory.innerHTML = "";
+
+  rollsElement.textContent = rolls;
+  roundElement.textContent = round;
+
+  resetRadioOptions();
 };
 
 // Add addEventListener to rollDiceBtn
