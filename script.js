@@ -33,27 +33,27 @@ const rollDice = () => {
     });
 };
 
-// Add updateRadioOption function
+// Declare updateRadioOption function
 const updateRadioOption = (index, score) => {
   scoreInputs[index].disabled = false;
   scoreInputs[index].value = score;
   scoreSpans[index].textContent = `, score = ${score}`;
 }
 
-// Function that update round and rolls
+// Declare a function that update round and rolls
 const updateStats = () => {
     rollsElement.textContent = rolls; // Update rolls text
     roundElement.textContent = round; // Update round text
 };
 
-// Create updateScore function (user selected value, score achieved)
+// Declare updateScore function (user selected value, score achieved)
 const updateScore = (selectedValue, achieved) => {
   score += parseInt(selectedValue); 
   totalScoreElement.textContent = score;
   scoreHistory.innerHTML = `<li>${achieved} : ${selectedValue}</li>`; // Add  new element li
 } 
 
-// Function that count how many times each number is found in the array  
+// Declare a function that count how many times each number is found in the array  
 const getHighestDuplicates = (arr) => {
   let sum = arr.reduce((acc, currVal) => acc + currVal, 0); //score = sum of all five dice values
   let duplicates = {};
@@ -73,7 +73,7 @@ const getHighestDuplicates = (arr) => {
   }
 };
 
-// Create resetRadioOptions function, call this function before you roll the dice
+// Declare resetRadioOptions function, call this function before you roll the dice
 const resetRadioOptions = () => {
   scoreInputs.forEach((i)=> {
     i.disabled = true;
@@ -104,7 +104,7 @@ const detectFullHouse = (arr) => {
   }
 };
 
-// Create a resetGame function
+// Declare a resetGame function
 const resetGame = () => {
   diceValuesArr = [0, 0, 0, 0, 0];
   score = 0;
@@ -120,6 +120,18 @@ const resetGame = () => {
 
   resetRadioOptions();
 };
+
+// Declare checkForStraights function 
+/*
+A small straight is when four of the dice have consecutive values, Ex (1234) resulting in a score of 30 points.
+A large straight is when all five dice have consecutive values in any order (Ex. 12345) resulting in a score of 40 points.
+*/ 
+const checkForStraights = (arr) => {
+  const counts = {};
+
+};
+
+
 
 // Add addEventListener to rollDiceBtn
 rollDiceBtn.addEventListener("click", () => {
