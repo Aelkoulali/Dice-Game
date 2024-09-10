@@ -127,9 +127,19 @@ A small straight is when four of the dice have consecutive values, Ex (1234) res
 A large straight is when all five dice have consecutive values in any order (Ex. 12345) resulting in a score of 40 points.
 */ 
 const checkForStraights = (arr) => {
-  const counts = {};
-
-
+  arr.sort((a, b)=> a-b);
+    let count = 0;
+    for(let i = 0; i <= arr.length; i++){
+      count++;
+      if (count === 5) {
+        updateRadioOption(3, 30); // small straight
+        updateRadioOption(4, 40); // large straight
+      } else if (count === 4) {
+        updateRadioOption(3, 30); // small straight
+      } else {
+      updateRadioOption(5, 0); // no straight
+    }
+  }
 };
 
 
