@@ -123,8 +123,8 @@ const resetGame = () => {
 
 // Declare checkForStraights function 
 /*
-A small straight is when four of the dice have consecutive values, Ex (1234) resulting in a score of 30 points.
-A large straight is when all five dice have consecutive values in any order (Ex. 12345) resulting in a score of 40 points.
+A small straight = when four of the dice have consecutive values, Ex (1234) resulting in a score of 30 points.
+A large straight = when all five dice have consecutive values in any order (Ex. 12345) resulting in a score of 40 points.
 */ 
 const checkForStraights = (arr) => {
   arr.sort((a, b)=> a-b);
