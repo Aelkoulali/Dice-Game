@@ -94,6 +94,9 @@ const detectFullHouse = (arr) => {
         counts[num] =1;
       }
   }
+
+  const values = Object.values(counts);
+  
   
 };
 
