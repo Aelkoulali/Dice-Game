@@ -129,6 +129,7 @@ A large straight is when all five dice have consecutive values in any order (Ex.
 const checkForStraights = (arr) => {
   const counts = {};
 
+
 };
 
 
@@ -144,6 +145,7 @@ rollDiceBtn.addEventListener("click", () => {
     getHighestDuplicates(diceValuesArr);
     resetRadioOptions();
     detectFullHouse(diceValuesArr);
+    checkForStraights(diceValuesArr);
   };
    
 });
