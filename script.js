@@ -96,7 +96,7 @@ const detectFullHouse = (arr) => {
   }
 
   for (const num in counts) {
-    if (counts[num] === 3 && counts[num] === 2 ) {
+    if (counts[num] === 3 && counts[num] === 2) {
         updateRadioOption(2, 25);
        } else {
         updateRadioOption(5, 0);
