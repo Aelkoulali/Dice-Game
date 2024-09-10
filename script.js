@@ -19,7 +19,7 @@ let rolls = 0;
 let score = 0;
 let round = 1;
 
-// Add Function rollDice
+// Declare rollDice function
 const rollDice = () => {
     diceValuesArr = [];
   
@@ -84,7 +84,10 @@ const resetRadioOptions = () => {
   });
 
 };
-// Declare detectFullHouse function = If the user rolls three of one number, and two of another number
+// Declare detectFullHouse function 
+/*
+Full house = If the user rolls three of one number, and two of another number.
+*/
 const detectFullHouse = (arr) => {
   const counts = {};
   for (const num of arr) {
@@ -142,8 +145,6 @@ const checkForStraights = (arr) => {
   }
 };
 
-
-
 // Add addEventListener to rollDiceBtn
 rollDiceBtn.addEventListener("click", () => {
   if(rolls === 3){
@@ -156,8 +157,7 @@ rollDiceBtn.addEventListener("click", () => {
     resetRadioOptions();
     detectFullHouse(diceValuesArr);
     checkForStraights(diceValuesArr);
-  };
-   
+  };   
 });
 
 // Add addEventListener to rulesBtn
@@ -195,7 +195,6 @@ keepScoreBtn.addEventListener("click", () => {
     } else {
       alert("Please select an option or roll the dice");
     }
-  }
-  
+  }  
 });
 
