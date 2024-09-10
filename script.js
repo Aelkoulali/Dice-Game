@@ -96,7 +96,11 @@ const detectFullHouse = (arr) => {
   }
 
   const values = Object.values(counts);
-  
+  if(values.includes(3) && values.includes(2)){
+    updateRadioOption(2, 25);
+  } else {
+    updateRadioOption(5, 0)
+  }
   
 };
 
