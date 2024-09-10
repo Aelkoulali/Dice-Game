@@ -86,7 +86,15 @@ const resetRadioOptions = () => {
 };
 // Declare detectFullHouse function = If the user rolls three of one number, and two of another number
 const detectFullHouse = (arr) => {
-
+  const counts = {};
+  for (const num of arr) {
+    if (counts[num]) {
+      counts[num]++;
+      } else {
+        counts[num] =1;
+      }
+  }
+  
 };
 
 // Create a resetGame function
